@@ -1,59 +1,13 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.header {
-  background-color: #999;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  background-color: green;
-}
-
-.posts {
-  background-color: pink;
-}
-
-.aside {
-  display: flex;
-  background-color: orange;
-}
-
-.author,
-.links {
-  width: 50%;
-}
-
-.footer {
-  background-color: blue;
-}
+@import "./core/reset.scss";
+@import "./layout/header.scss";
+@import "./layout/main";
+@import "./layout/main-posts";
+@import "./layout/main-aside";
+@import "./layout/footer";
+@import "./layout/body";
 
 @media all and (min-width: 768px) {
   body {
     border-left: #666 solid 25px;
-  }
-
-  .main {
-    flex-direction: row;
-  }
-
-  .posts {
-    width: 70%;
-  }
-
-  .aside {
-    flex-direction: column;
-    transform: translate(0, -100px);
-    width: 30%;
-  }
-  .author,
-  .links {
-    width: auto;
-  }
-  .author-img {
-    width: 135px; /* otra opción sería darlo en % para que crezca en función del tamaño de la pantalla pero siempre entre dentro del aside*/
   }
 }

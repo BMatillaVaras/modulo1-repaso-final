@@ -1,0 +1,25 @@
+.aside {
+  display: flex;
+  background-color: orange;
+}
+
+.author,
+.links {
+  width: 50%;
+}
+
+@media all and (min-width: 768px) {
+  .aside {
+    flex-direction: column;
+    transform: translate(0, -100px);
+    width: 30%;
+  }
+
+  .author,
+  .links {
+    width: 100%;
+  }
+  .author-img {
+    width: 135px; /* otra opción sería darlo en % para que crezca en función del tamaño de la pantalla pero siempre entre dentro del aside*/
+  }
+}
